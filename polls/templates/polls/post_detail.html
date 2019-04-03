@@ -6,7 +6,9 @@
                 {{ post.created_date }}
             </div>
         {% endif %}
+        <h2><a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a></h2>
         <h2>{{ post.movie_title }}</h2>
+        <h2>{{ post.rating}}</h2>
         <p>{{ post.review|linebreaksbr }}</p>
     </div>
 {% endblock %}
