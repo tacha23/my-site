@@ -1,6 +1,14 @@
-<html>
-<title>Home</title>
-<body>
-<h1><em>Hello</em></h1>
-</body>
-</html>
+{% extends 'polls/tem.html' %}
+{% block content %}
+{% for post in posts %}
+<ul>
+  <a href="{% url 'post_detail' pk=post.pk %}"><li>Movie's Name : {{post.movie_title}}</li></a>
+  <li>Viewer's Name : {{post.viewer_name}}</li>
+  <li>Rating : {{post.rating}}</li>
+  <li>Review : "{{post.review}}"</li>
+  <li>Created Date : {{post.created_date}}</li>
+</ul>
+<br><br>
+
+{% endfor %}
+{% endblock %}

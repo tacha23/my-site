@@ -1,0 +1,12 @@
+{% extends 'polls/tem.html' %}
+{% block content %}
+<div class="post">
+        {% if post.created_date %}
+            <div class="date">
+                {{ post.created_date }}
+            </div>
+        {% endif %}
+        <h2>{{ post.movie_title }}</h2>
+        <p>{{ post.review|linebreaksbr }}</p>
+    </div>
+{% endblock %}
