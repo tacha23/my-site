@@ -6,8 +6,11 @@ from django.template import Template, Context
 import datetime
 
 
-def index(request):
-    return render(request, 'polls/tem.html')
+#def index(request):
+    #return render(request, 'polls/tem.html')
+
+def post_list(request):
+    return render(request, 'polls/post_list.html', {})
 
 
 #It's scheduled to ship on {{ date|date:"F j, Y" }}
